@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>欢迎来到认证页面</title>
+</head>
+<body>
+<h1>请确认是否同意授权</h1>
+<form th:action="'/auth/createToken/' + ${clientId}" target="_self" method="get">
+    <button type="submit" value="同意">同意</button>
+    <button type="button" onclick="window.close()" value="关闭">关闭</button>
+</form>
+</body>
+</html>
